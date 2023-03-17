@@ -1,7 +1,8 @@
 # asdposttest3
 
-Dalam contoh di atas, Node merepresentasikan sebuah data sepatu dengan atribut merk dan harga serta pointer next yang menunjukkan ke node berikutnya dalam linked list. LinkedList merepresentasikan kumpulan dari node-node tersebut, dengan head sebagai node pertama dalam linked list.
-
-Metode add_node digunakan untuk menambahkan node baru ke linked list. Pertama, membuat objek new_node dengan nilai atribut merk dan harga yang diberikan. Jika linked list masih kosong, maka new_node menjadi head. Jika tidak, maka iterasi ke node terakhir dalam linked list (while current.next is not None) dan menambahkan new_node sebagai node berikutnya.
-
-Metode display_list digunakan untuk menampilkan semua node dalam linked list. Jika linked list masih kosong, maka menampilkan pesan "List kosong". Jika tidak, maka iterasi ke setiap node dalam linked list dan menampilkan nilai atribut merk dan harga dari setiap node.
+Pertama-tama, kita mengimpor modul prettytable untuk dapat menampilkan data dalam bentuk tabel yang rapi.
+Selanjutnya, kita mendefinisikan kelas Node yang berisi data dan pointer ke node berikutnya.
+Kemudian, kita mendefinisikan kelas LinkedList yang berisi head node dan beberapa metode, di antaranya adalah metode add untuk menambahkan data ke linked list, dan metode display untuk menampilkan isi linked list dalam bentuk tabel yang rapi.
+Pada metode add, kita membuat sebuah node baru dan menambahkannya ke akhir linked list dengan mengiterasi dari head node sampai ke node terakhir, dan menambahkan node baru tersebut sebagai node berikutnya dari node terakhir.
+Pada metode display, kita menggunakan modul prettytable untuk membuat tabel dengan header dan data yang disimpan di linked list. Pertama-tama, kita memeriksa apakah linked list kosong. Jika tidak, kita membuat objek PrettyTable dan menentukan nama-nama kolom dengan field_names. Selanjutnya, kita mengiterasi dari head node sampai ke node terakhir dan menambahkan data dari setiap node ke tabel menggunakan metode add_row. Terakhir, kita mencetak tabel tersebut dengan metode print.
+Pada contoh penggunaan, kita membuat objek LinkedList, menambahkan beberapa data ke linked list, dan menampilkan isi linked list dalam bentuk tabel.
